@@ -6,7 +6,7 @@
         display: flex;
         width: 100vw;
         height: 100vh;
-        background-image: url(images/grass.gif);
+        background-image: url(grass.gif);
         background-size: cover;
         align-items: center;
         justify-content: center;
