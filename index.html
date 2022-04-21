@@ -49,7 +49,7 @@
                         </form>
                     </div>
                     <div class="dispayScreen">
-                        <php>
+                        <?php
                             <!-- // this line connects to the local postgres DB, just add your credentials -->
                             $db = pg_connect("host=localhost port=5432 dbname=Pokemon user=postgres password=pokemon");
 
@@ -127,7 +127,7 @@
                                     echo "<br />\n";
                                 } 
                             } 
-                        </php>
+                        ?php>
                     </div>
                 </div>
                 <div class="PokédexDecalOutline">
