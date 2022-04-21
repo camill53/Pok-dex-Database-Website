@@ -14,35 +14,35 @@
             <div class="Pokédex">
                 <div class="screenOutlines">
                     <div class="promptScreen">
-                        <form action="site.php" method="GET">
+                        <form action="index.php" method="GET">
                             <label for="pokemon_name"> Enter Pokemon Name:</label>
                             <input type="text" name="pokemon_name">
                             <input type="submit" value="Submit">
                          </form>
                             <br>
                             <br>
-                        <form action="site.php" method="GET">
+                        <form action="index.php" method="GET">
                             <label for="pokedex_number"> Enter Pokedex Number:</label>
                             <input type="number" name="pokedex_number">
                             <input type="submit" value="Submit">
                         </form>
                             <br>
                             <br>
-                        <form action="site.php" method="GET">
+                        <form action="index.php" method="GET">
                             <label for="pokemon_generation"> Enter Pokemon Generation:</label>
                             <input type="number" name="pokemon_generation">
                             <input type="submit" value="Submit">
                         </form>
                             <br>
                             <br>
-                        <form action="site.php" method="GET">
+                        <form action="index.php" method="GET">
                             <label for="pokemon_type"> Enter Pokemon Type:</label>
                             <input type="text" name="pokemon_type">
                             <input type="submit" value="Submit">
                         </form>
                             <br>
                             <br>
-                        <form action="site.php" method="GET">
+                        <form action="index.php" method="GET">
                             <label for="region"> Enter Region Origin :</label>
                             <input type="text" name="region">
                             <input type="submit" value="Submit">
@@ -50,18 +50,18 @@
                     </div>
                     <div class="dispayScreen">
                         <?php
-                            <!-- // this line connects to the local postgres DB, just add your credentials -->
+                             // this line connects to the local postgres DB, just add your credentials -->
                             $db = pg_connect("host=localhost port=5432 dbname=Pokemon user=postgres password=pokemon");
 
 
-                            <!-- // this is just an if statement to check if the DB connection is successful -->
+                             // this is just an if statement to check if the DB connection is successful -->
                             if(!$db) {
                             echo "Error: Unable to open database\n";
                             } else {
                                 echo "Opened database succesfully <br>";
                             }
 
-                            <!-- // these next lines run queries for pokemon name, pokedex number, type, generation, and region
+                             // these next lines run queries for pokemon name, pokedex number, type, generation, and region
                             // the queries use joins within them and store the output in the corresponding php variables
                             // I used the forms above with the $_GET command to add the user input to the query
                             // the input corresponds to the name in the form above
@@ -81,7 +81,7 @@
 
                             $region = pg_query($db, "SELECT name, pokemon.pokedexnum, regionname, region.generation, normcolor, shinycolor FROM Pokemon join fromregion on Pokemon.pokedexnum = fromregion.pokedexnum join region on fromregion.generation = region.generation WHERE region.regionname = '$_GET[region]'");
 
-                            <!-- // Below I just used multiple if statements to check which variable had the user input
+                            // Below I just used multiple if statements to check which variable had the user input
                             // Only one form can be used at a time to make the website simple
                             // within each if statement there is a while loop and $row stores the results of the query
                             // After that echo is used to print each row
