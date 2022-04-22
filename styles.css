@@ -96,10 +96,13 @@
         font-family: 'pkmn_rbygscregular';
         font-size: 15px;
         background:linear-gradient(rgba(112, 95, 95, 0.5), rgba(112, 95, 95, 0.5)), url(grain.jpg);
-
+        animation: grain 1.5s steps(6) infinite;
     }
 
     .dispayScreen {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 10px;
         width: 90%;
         height: 40%;
         margin-top: 30px;
@@ -109,6 +112,8 @@
         font-family: 'pkmn_rbygscregular';
         font-size: 15px;
         background:linear-gradient(rgba(112, 95, 95, 0.5), rgba(112, 95, 95, 0.5)), url(grain.jpg);
+        animation: grain 1.5s steps(6) infinite;
+        color: rgb(205, 201, 200);
     }
 
     .submit {
@@ -125,10 +130,6 @@
         width: 75%;
         margin-bottom: 13px;
         cursor: pointer;
-    }
-    
-    .label {
-        /* margin-top: 20px; */
     }
 
     .PokédexDecalOutline {
@@ -184,9 +185,9 @@
 
     @keyframes grain {
         0%, 100% {transform: translate(0, 0);}
-        10% {transform: translate(-.05%, -.05%);}
-        30% {transform: translate(.05%, -.05%);}
-        50% {transform: translate(.05%, .05%);}
-        70% {transform: translate(.05%, .05%);}
-        90% {transform: translate(-.05%, .05%);}
+        10% {transform: translate(-.1%, -.1%);}
+        30% {transform: translate(.1%, -.1%);}
+        50% {transform: translate(.1%, .1%);}
+        70% {transform: translate(-.1%, .1%);}
+        90% {transform: translate(-.1%, .1%);}
     }
