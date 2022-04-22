@@ -1,3 +1,12 @@
+    @font-face {
+        font-family: 'pkmn_rbygscregular';
+        src: url('pkmn_rbygsc-webfont.woff2') format('woff2'),
+            url('pkmn_rbygsc-webfont.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+
+    }
+    
     * {
         margin: 0;
     } 
@@ -10,28 +19,54 @@
         background-size: cover;
         align-items: center;
         justify-content: center;
+        
+    }
+
+    .welcomeText {
+        display: flex;
+        justify-content: baseline;
+        align-items: center;
+        flex-direction: column;
+        width: 38%;
+        height: 100%;
+        font-family: 'pkmn_rbygscregular';
+        font-size: 35px;
+    }
+
+    .welcomeTextCont {
+        width: 38%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: baseline;
+        font-family: 'pkmn_rbygscregular';
+        font-size: 35px;
+        margin-left: 4px;
     }
 
     .PokédexOutline {
         display: flex;
-        width: 25%;
-        height: 100%;
+        width: 24%;
+        height: 98.5%;
         background-color: black;
         align-items: center;
+        justify-content: center;
         flex-direction: column;
         position: relative;
         z-index: 0;
+        border-radius: 3%;
     }
 
     .Pokédex {
         display: flex;
-        width: 95%;
-        height: 100%;
+        width: 90%;
+        height: 95%;
         background-color: #333131;
         align-items: center;
         flex-direction: column;
         position: relative;
         z-index: 1;
+        border-radius: 3%;
     }
 
     .screenOutlines {
@@ -43,14 +78,25 @@
         align-items: center;
         flex-direction: column;
         position: relative;
+        border-radius: 3%;
+
     }
 
     .promptScreen {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 10px;
         width: 90%;
         height: 40%;
         background-color: rgb(205, 201, 200);
+        color: rgb(205, 201, 200);
         margin-top: 30px;
         overflow-y:auto;
+        border-radius: 2%;
+        font-family: 'pkmn_rbygscregular';
+        font-size: 15px;
+        background:linear-gradient(rgba(112, 95, 95, 0.5), rgba(112, 95, 95, 0.5)), url(grain.jpg);
+
     }
 
     .dispayScreen {
@@ -58,31 +104,51 @@
         height: 40%;
         margin-top: 30px;
         background-color: rgb(205, 201, 200);
+        overflow-y: auto;
+        border-radius: 2%;
+        font-family: 'pkmn_rbygscregular';
+        font-size: 15px;
+        background:linear-gradient(rgba(112, 95, 95, 0.5), rgba(112, 95, 95, 0.5)), url(grain.jpg);
+    }
+
+    .submit {
+        font-family: 'pkmn_rbygscregular';
+        font-size: 10px;
+        cursor: pointer;
+    }
+
+    .textInput {
+        font-family: 'pkmn_rbygscregular';
+        font-size: 10px;
+        border: 2px solid black;
+        margin-top: 13px;
+        width: 75%;
+        margin-bottom: 13px;
+        cursor: pointer;
+    }
+    
+    .label {
+        /* margin-top: 20px; */
     }
 
     .PokédexDecalOutline {
-        width: 100%;
-        height: 25%;
-        margin-top: 30px;
-        border-top-left-radius: 100%;
-        border-top-right-radius: 100%;
+        width: 50%;
+        height:25%;
+        border-radius: 100%;
         background-color:black;
         position:absolute;
-        bottom: 0px;
+        bottom: 5px;
         display: flex;
         justify-content: center;
         align-items: center;
     }
 
     .PokédexDecal {
-        width: 98%;
-        height: 97%;
-        margin-top: 30px;
-        border-top-left-radius: 100%;
-        border-top-right-radius: 100%;
+        width: 90%;
+        height: 90%;
+        border-radius: 100%;
         background-color: #fd5a2a;
         position:absolute;
-        bottom: 0px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -90,9 +156,9 @@
 
     .innerDecalBallBlack {
         position: absolute;
-        width: 20%;
+        width: 50%;
         height: 50%;
-        border-radius: 50%;
+        border-radius: 100%;
         background-color: black;
         display: flex;
         justify-content: center;
@@ -102,9 +168,9 @@
 
     .innerDecallBallWhite{
         position: absolute;
-        width: 85%;
-        height: 85%;
-        border-radius: 50%;
+        width: 75%;
+        height: 75%;
+        border-radius: 100%;
         background-color: white;
         z-index: 5;
     }
@@ -114,4 +180,13 @@
         height: 20%;
         background-color: black;
         z-index: 3;
+    }
+
+    @keyframes grain {
+        0%, 100% {transform: translate(0, 0);}
+        10% {transform: translate(-.05%, -.05%);}
+        30% {transform: translate(.05%, -.05%);}
+        50% {transform: translate(.05%, .05%);}
+        70% {transform: translate(.05%, .05%);}
+        90% {transform: translate(-.05%, .05%);}
     }
