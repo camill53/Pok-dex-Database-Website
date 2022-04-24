@@ -18,31 +18,29 @@
                     <div class="promptScreen">
                     <form action="index.php" method="GET">
                         <label for="pokemon_name">Pokemon Name:</label>
-						<input type="text" name="pokemon_name">
-					  
-						<label for="pokedex_number">Pokedex Number:</label>
-						<input type="number" name="pokedex_number">
-				
-						<label for="pokemon_generation">Pokemon Generation:</label>
-						<input type="number" name="pokemon_generation">
-				  
-						<label for="pokemon_type">Pokemon Type:</label>
-						<input type="text" name="pokemon_type">
-			  
-						<label for="region">Region Origin:</label>
-						<input type="text" name="region">
-						
-						<label for="pokemon_ability">Pokemon Ability:</label>
-						<input type="text" name="pokemon_ability">
+			<label for="pokemon_name" class="label"> Pokemon Name:</label>
+			<input type="text" class="textInput" name="pokemon_name">
 
-                        <input type="submit" class="submit" style="margin-left: 40%" value="Submit">
-                        </form>
+			<label for="pokedex_number"> Pokedex Number:</label>
+			<input type="number" class="textInput" name="pokedex_number">
+
+			<label for="pokemon_generation"> Pokemon Generation:</label>
+			<input type="number" class="textInput" name="pokemon_generation">
+
+			<label for="pokemon_type"> Pokemon Type:</label>
+			<input type="text" class="textInput" name="pokemon_type">
+
+			<label for="region"> Region Origin :</label>
+			<input type="text" class="textInput" name="region">
+
+			<input type="submit" class="submit" style="margin-left: 40%" value="Submit">	
+			</form>
                     </div> 
                     <div class="dispayScreen">
 
                     <?php
                              // this line connects to the local postgres DB, just add your credentials -->
-                            $db = pg_connect("host=localhost port=5432 dbname=Pokedex user=postgres password=' '");
+                            $db = pg_connect("host=localhost port=5432 dbname=Pokemon user=postgres password=' '");
 
 
                              // this is just an if statement to check if the DB connection is successful -->
