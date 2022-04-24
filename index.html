@@ -117,7 +117,6 @@
 							if($req){
 								if(!$checkothers || $checkothersTwo){
 									while($row = pg_fetch_row($req)) {
-										echo "xD";
 										echo "Pokemon Name: $row[0]<br>  Pokedex Number: $row[1]<br>  Region: $row[2]<br> Generation: $row[3]<br>  Normal Color: $row[4]<br>  Shiny Color: $row[5] <br>";
 										echo "<br />\n";
 									} 
