@@ -17,7 +17,7 @@
                 <div class="screenOutlines">
                     <div class="promptScreen">
                     <form action="index.php" method="GET">
-                        <label for="pokemon_name"> Enter Pokemon Name:</label>
+                        <label for="pokemon_name">Pokemon Name:</label>
 						<input type="text" name="pokemon_name">
 					  
 						<label for="pokedex_number">Pokedex Number:</label>
@@ -29,10 +29,10 @@
 						<label for="pokemon_type">Pokemon Type:</label>
 						<input type="text" name="pokemon_type">
 			  
-						<label for="region">Region Origin :</label>
+						<label for="region">Region Origin:</label>
 						<input type="text" name="region">
 						
-						<label for="pokemon_ability">Pokemon Ability :</label>
+						<label for="pokemon_ability">Pokemon Ability:</label>
 						<input type="text" name="pokemon_ability">
 
                         <input type="submit" class="submit" style="margin-left: 40%" value="Submit">
@@ -42,7 +42,7 @@
 
                     <?php
                              // this line connects to the local postgres DB, just add your credentials -->
-                            $db = pg_connect("host=localhost port=5432 dbname=Pokemon user=postgres password=pokemon");
+                            $db = pg_connect("host=localhost port=5432 dbname=Pokedex user=postgres password=' '");
 
 
                              // this is just an if statement to check if the DB connection is successful -->
@@ -104,7 +104,7 @@
 								$typeExists = true;
 								
 							}
-							if($_GET[region] != "" && $checkregion || $_GET[pokemon_generation] == ""){
+							if($_GET[region] != "" && ($checkregion || $_GET[pokemon_generation] == "")){
 								if($typeExists)
 									$WhereSubString .= " AND ";
 								$WhereSubString .= "region.regionname = '$_GET[region]'";
