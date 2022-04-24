@@ -32,7 +32,10 @@
 
 			<label for="region"> Region Origin :</label>
 			<input type="text" class="textInput" name="region">
-
+			    
+		    	<label for="pokemon_ability">Pokemon Ability:</label>
+			<input type="text" class="textInput" name="pokemon_ability">
+	
 			<input type="submit" class="submit" style="margin-left: 40%" value="Submit">	
 			</form>
                     </div> 
