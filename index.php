@@ -17,7 +17,6 @@
                 <div class="screenOutlines">
                     <div class="promptScreen">
                     <form action="index.php" method="GET">
-                        <label for="pokemon_name">Pokemon Name:</label>
 			<label for="pokemon_name" class="label"> Pokemon Name:</label>
 			<input type="text" class="textInput" name="pokemon_name">
 
