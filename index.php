@@ -42,7 +42,7 @@
 
                     <?php
                              // this line connects to the local postgres DB, just add your credentials -->
-                            $db = pg_connect("host=localhost port=5432 dbname=Pokemon user=postgres password=' '");
+                            $db = pg_connect("host=localhost port=5432 dbname=Pokemon user=postgres password=password");
 
 
                              // this is just an if statement to check if the DB connection is successful -->
